@@ -5,7 +5,7 @@ A Wake-on-LAN magic packet CLI written in Rust.
 ## Install with mise
 
 ```sh
-mise use gh:<owner>/wakeonlan
+mise use -g github:manhavn/wakeonlan
 ```
 
 mise uses the `ubi` backend, which matches assets by target triple (`x86_64-unknown-linux-musl`, `aarch64-apple-darwin`, …). Make sure the release is tagged with the right version (e.g. `v0.1.0`) and that all archives plus `SHA256SUMS.txt` are uploaded to it.
@@ -56,4 +56,4 @@ Each archive contains a single stripped binary, and `dist/SHA256SUMS.txt` is gen
 1. Bump `version` in `Cargo.toml`, then run `./build-release.sh`.
 2. Create the tag `v<version>` and push it.
 3. Upload every file in `dist/` to that tag's GitHub release.
-4. `mise use gh:<owner>/wakeonlan` now installs the right binary for each OS/arch.
+4. `mise use -g github:manhavn/wakeonlan` now installs the right binary for each OS/arch.

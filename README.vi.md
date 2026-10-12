@@ -7,7 +7,7 @@ Xem [README.md](README.md) cho phiên bản tiếng Anh.
 ## Cài qua mise
 
 ```sh
-mise use gh:<owner>/wakeonlan
+mise use -g github:manhavn/wakeonlan
 ```
 
 mise dùng backend `ubi` tự nhận diện asset theo triple (`x86_64-unknown-linux-musl`, `aarch64-apple-darwin`, …). Đảm bảo release đã được tag đúng version (ví dụ `v0.1.0`) và upload toàn bộ archive + `SHA256SUMS.txt` vào release đó.
@@ -56,4 +56,4 @@ Mỗi archive chứa một binary đã strip, kèm `dist/SHA256SUMS.txt`.
 1. Đổi `version` trong `Cargo.toml` rồi chạy `./build-release.sh`.
 2. Tạo tag `v<version>` và push.
 3. Upload toàn bộ file trong `dist/` vào GitHub release của tag đó.
-4. `mise use gh:<owner>/wakeonlan` giờ cài được theo OS/arch.
+4. `mise use -g github:manhavn/wakeonlan` giờ cài được theo OS/arch.
